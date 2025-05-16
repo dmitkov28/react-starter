@@ -16,7 +16,9 @@ export default function Counter() {
   return (
     <div>
       <h2 data-testid="counter" className="text-center text-2xl font-bold">
-        Count: {count}
+        Count:
+        {" "}
+        {count}
       </h2>
       <div className="grid grid-cols-2 gap-4 max-w-[300px] mx-auto my-8">
         <button

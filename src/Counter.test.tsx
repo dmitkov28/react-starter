@@ -1,13 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
+
 import Counter from "./Counter";
 
-describe("Counter Component Test", () => {
+describe("counter Component Test", () => {
   it("should display the correct count when incremented and decremented", async () => {
     render(<Counter />);
     const counter = screen.getByTestId("counter");
-    expect(counter).toBeVisible;
+    expect(counter).toBeVisible();
 
     const incrementBtn = screen.getByTestId("increment");
     const decrementBtn = screen.getByTestId("decrement");
@@ -24,7 +25,7 @@ describe("Counter Component Test", () => {
   it("should not continue decrementing if the count is 0", async () => {
     render(<Counter />);
     const counter = screen.getByTestId("counter");
-    expect(counter).toBeVisible;
+    expect(counter).toBeVisible();
 
     const decrementBtn = screen.getByTestId("decrement");
     await userEvent.click(decrementBtn);
